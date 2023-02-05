@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">SmartHome</string>
+    <string name="app_name">慧居</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">慧居</string>
+    <string name="title_dashboard"> 智能</string>
+    <string name="title_notifications"> 我的</string>
+    <string name="title_allhome">全屋</string>
+    <string name="title_roomemanagement">房间管理</string>
+    <string name="title_allequipment">全部设备</string>
+    <string name="account">手机号码或用户名</string>
+    <string name="password">密码</string>
+    <string name="ture_password">确认密码</string>
+    <string name="log_in">登录</string>
+    <string name="forgot"><font colcor='#c4c4c4'>忘记密码？</font><b>获取帮助</b></string>
+    <string name="sign_up"><font color='#c4c4c4'>还没有账号></font><b>注册</b></string>
+    <string name="enroll">注册</string>
 </resources>

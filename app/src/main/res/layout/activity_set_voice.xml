@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SetVoice"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/voice_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:logo="@drawable/back"
+        app:title="语音设置"
+        app:titleTextColor="@color/lighthui">
+    </androidx.appcompat.widget.Toolbar>
+
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:text="房间快捷指令设置"
+     android:textSize="15dp"
+     android:fontFamily="sans-serif-black"
+     android:textColor="@color/lighthui"
+     android:layout_marginTop="25dp"
+     android:drawableEnd="@drawable/enroll_next"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="语音控制授权管理"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/lighthui"
+        android:layout_marginTop="25dp"
+        android:drawableEnd="@drawable/enroll_next"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text=" 语音别名设置"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/lighthui"
+        android:layout_marginTop="25dp"
+        android:drawableEnd="@drawable/enroll_next"/>
+
+
+</LinearLayout>
