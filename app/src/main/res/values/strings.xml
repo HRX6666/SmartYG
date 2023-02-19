@@ -14,4 +14,44 @@
     <string name="forgot"><font colcor='#c4c4c4'>忘记密码？</font><b>获取帮助</b></string>
     <string name="sign_up"><font color='#c4c4c4'>还没有账号></font><b>注册</b></string>
     <string name="enroll">注册</string>
+    <string-array name="choose_home">
+        <item>全屋</item>
+        <item>卧室</item>
+        <item>卫生间</item>
+        <item>客厅</item>
+    </string-array>
+    <string-array name="choose_curtain_model">
+        <item>全关</item>
+        <item>全开</item>
+        <item>半开</item>
+    </string-array>
+    <string-array name="choose_wind_speed">
+        <item>高</item>
+        <item>中</item>
+        <item>低</item>
+    </string-array>
+    <string-array name="choose_aircondition_modle">
+        <item>制冷</item>
+        <item>制热</item>
+        <item>睡眠</item>
+        <item>自动</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="choose_lights_model">
+        <item>关闭</item>
+        <item>普通模式</item>
+        <item>呼吸灯模式</item>
+        <item>晚睡模式</item>
+        <item>自定义模式</item>
+    </string-array>
+    <string-array name="choose_mentor">
+        <item>锁门</item>
+        <item>开门</item>
+        <item>警报模式</item>
+        <item>反锁</item>
+    </string-array>
+    <string-array name="choose_waterheater">
+        <item>关</item>
+        <item>开</item>
+    </string-array>
 </resources>

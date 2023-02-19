@@ -16,6 +16,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
+        android:id="@+id/set_home_manage"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text=" 家庭房间管理"
@@ -49,7 +50,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text=" 喜好设置"
+        android:text=" 录入人脸/指纹"
         android:textSize="15dp"
         android:fontFamily="sans-serif-black"
         android:textColor="@color/lighthui"

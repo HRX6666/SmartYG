@@ -1,9 +1,19 @@
 package com.example.smarthome.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,9 +28,12 @@ import com.example.smarthome.R;
 
 import java.util.ArrayList;
 
-public class SmartFragment extends Fragment {
+public class SmartFragment extends Fragment{
     RecyclerView addsmart;
     RecyclerView.Adapter adapter;
+    AddSmartAdapter rvadapter;
+    ImageView go_off,go_home,night,addroom;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -31,20 +44,105 @@ public class SmartFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         addsmart=getActivity().findViewById(R.id.add_smart);
         super.onActivityCreated(savedInstanceState);
+        go_off=getActivity().findViewById(R.id.go_off);
+        go_home=getActivity().findViewById(R.id.go_home);
+        night=getActivity().findViewById(R.id.night);
+        addroom=getActivity().findViewById(R.id.add_home);
         recyclerView();
+        initlongcard();//长按卡片进入具体模式的设置
+        initcard(); //点击卡片上的文字，向云端发送信号，开启模式设置
+    }
+
+    private void initcard() {
+        go_off.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        go_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        night.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+    }
+
+    private void initlongcard() {
+
+        go_off.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent1=new Intent(getActivity(),GoOff.class);
+                startActivity(intent1);
+
+                return false;
+            }
+        });
+        go_home.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent2=new Intent(getActivity(),GoHome.class);
+                startActivity(intent2);
+
+                return false;
+            }
+        });
+        night.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent3=new Intent(getActivity(),Night.class);
+                startActivity(intent3);
+
+                return false;
+            }
+        });
+
     }
 
     private void recyclerView() {
         addsmart.setHasFixedSize(true);
-        addsmart.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
-        ArrayList<AddSmartHelper> addSmartHelpers=new ArrayList<>();
-        addSmartHelpers.add(new AddSmartHelper(R.drawable.lights_smart,"灯光"));
-        addSmartHelpers.add(new AddSmartHelper(R.drawable.air_condition_smart,"空调"));
-        addSmartHelpers.add(new AddSmartHelper(R.drawable.curtain_smart,"窗帘"));
-        addSmartHelpers.add(new AddSmartHelper(R.drawable.lock_smart,"智能门锁"));
-        adapter=new AddSmartAdapter(addSmartHelpers);
+        addsmart.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+        ArrayList<AddSmartHelper> addSmartHelpers = new ArrayList<>();
+        addSmartHelpers.add(new AddSmartHelper(R.drawable.lights_smart, "灯光"));
+        addSmartHelpers.add(new AddSmartHelper(R.drawable.air_condition_smart, "空调"));
+        addSmartHelpers.add(new AddSmartHelper(R.drawable.curtain_smart, "窗帘"));
+        addSmartHelpers.add(new AddSmartHelper(R.drawable.lock_smart, "智能门锁"));
+        adapter = new AddSmartAdapter(addSmartHelpers);
         addsmart.setAdapter(adapter);
-
+        rvadapter = new AddSmartAdapter(addSmartHelpers);
+        rvadapter.setOnItemClickListener(new AddSmartAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClickListener(View view, int position) {
+                switch (position) {
+                    case 0:
+                        Intent intent1 = new Intent(getActivity(), AdjustTheLights.class);
+                        startActivity(intent1);
+                        break;
+                    case 1:
+                        Intent intent2 = new Intent(getActivity(), AdjustTheAirCondition.class);
+                        startActivity(intent2);
+                        break;
+                    case 2:
+                        Intent intent3 = new Intent(getActivity(), AdustTheCurtain.class);
+                        startActivity(intent3);
+                        break;
+                    case 3:
+                        Intent intent4 = new Intent(getActivity(), Monitoring.class);
+                        startActivity(intent4);
+                        break;
+                }
+            }
+        });
 
     }
+
+
+
 }

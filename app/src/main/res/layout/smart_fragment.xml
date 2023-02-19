@@ -18,6 +18,7 @@
             android:src="@drawable/menu1" />
 
         <ImageView
+            android:id="@+id/add_home"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
@@ -69,6 +70,7 @@
                         android:elevation="8dp">
 
                         <ImageView
+                            android:id="@+id/go_off"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_centerInParent="true"
@@ -96,6 +98,7 @@
                         android:elevation="8dp">
 
                         <ImageView
+                            android:id="@+id/go_home"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_centerInParent="true"
@@ -123,6 +126,7 @@
                         android:elevation="8dp">
 
                         <ImageView
+                            android:id="@+id/night"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_centerInParent="true"

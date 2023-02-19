@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.GoOff"
+    android:background="@color/yellow1"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/go_off_tb"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:logo="@drawable/back"
+        app:title="离家模式"
+        app:titleTextColor="@color/lighthui"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:text="窗帘"
+            android:textSize="25dp"
+            android:drawableEnd="@drawable/curtain_seekbar"/>
+
+
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/go_off_curtain"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:spinnerMode="dropdown" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:text="灯光"
+            android:textSize="25dp"
+            android:drawableEnd="@drawable/adjust_lights"/>
+
+
+    </LinearLayout>
+    <Spinner
+        android:id="@+id/go_off_lights"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:spinnerMode="dropdown" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+        .
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:text="门锁"
+            android:textSize="25dp"
+            android:drawableEnd="@drawable/little_mentor"/>
+
+
+    </LinearLayout>
+    <Spinner
+    android:id="@+id/go_off_mentor"
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:spinnerMode="dropdown" />
+</LinearLayout>

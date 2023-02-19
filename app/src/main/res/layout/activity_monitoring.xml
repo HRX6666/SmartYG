@@ -4,14 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Monitoring">
-    <RelativeLayout
+    tools:context=".Activity.AdjustTheLights"
+    android:orientation="vertical"
+    android:background="@color/yellow1">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/voice_tb"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/back"/>
-    </RelativeLayout>
+        android:layout_height="wrap_content"
+        app:logo="@drawable/back"
+        app:title="门锁装置"
+        app:titleTextColor="@color/lighthui">
+    </androidx.appcompat.widget.Toolbar>
+    <SurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/yellow2"
+        android:text="开门" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/yellow2"
+        android:text="锁门" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/yellow2"
+        android:text="报警" />
+
 
 </LinearLayout>

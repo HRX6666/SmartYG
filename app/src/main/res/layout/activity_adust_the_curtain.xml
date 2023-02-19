@@ -8,11 +8,11 @@
     android:orientation="vertical"
     android:background="@color/yellow1">
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/lights_tb"
+        android:id="@+id/curtain_tb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:logo="@drawable/back"
-        app:title="智能灯"
+        app:title="窗帘"
         app:titleTextColor="@color/lighthui">
     </androidx.appcompat.widget.Toolbar>
 
@@ -26,64 +26,39 @@
             android:layout_width="180dp"
             android:layout_height="150dp"
             android:layout_marginTop="25dp"
-            android:drawableStart="@drawable/turn_the_lights_off"
+            android:drawableStart="@drawable/curtain_smart"
             android:fontFamily="sans-serif-black"
-            android:text=" 智能灯"
+            android:text=" 窗帘控制"
             android:textColor="@color/lighthui"
             android:textSize="15dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="一键控制全屋灯光"
-            android:textColor="@color/lighthui"
-            android:textSize="18dp"
-            android:textStyle="bold" />
 
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="vertical">
+
         <Spinner
-            android:id="@+id/lights_choose_home"
+            android:id="@+id/curtain_choose_home"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:spinnerMode="dropdown"/>
 
     </RelativeLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:text="亮度"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-black" />
-  <SeekBar
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:thumb="@drawable/adjust_lights"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:text="色温"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-black" />
-
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:thumb="@drawable/adjust_lights"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="vertical">
         <Spinner
-            android:id="@+id/lights_choose_model"
+            android:id="@+id/curtain_choose_model"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:spinnerMode="dropdown"/>
 
     </RelativeLayout>
-
-
+   <SeekBar
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:splitTrack="true"
+       android:thumb="@drawable/curtain_seekbar"/>
 </LinearLayout>

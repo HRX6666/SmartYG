@@ -8,11 +8,11 @@
     android:orientation="vertical"
     android:background="@color/yellow1">
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/voice_tb"
+        android:id="@+id/air_tb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:logo="@drawable/back"
-        app:title="调整虚拟状态设备"
+        app:title="空调"
         app:titleTextColor="@color/lighthui">
     </androidx.appcompat.widget.Toolbar>
     <LinearLayout
@@ -24,35 +24,59 @@
             android:layout_width="250dp"
             android:layout_height="150dp"
             android:layout_marginTop="25dp"
-            android:drawableStart="@drawable/turn_the_lights_off"
+            android:drawableStart="@drawable/air_condition_close"
             android:fontFamily="sans-serif-black"
-            android:text=" 智能灯\n虚拟设备房间"
+            android:text=" 空调\n虚拟设备房间"
             android:textColor="@color/lighthui"
             android:textSize="15dp" />
 
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="160dp"
-            android:layout_height="15dp" />
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/air_choose_home"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:spinnerMode="dropdown"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/air_choose_windspeed"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:spinnerMode="dropdown"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/air_choose_model"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:spinnerMode="dropdown"/>
+
+    </RelativeLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:text="亮度"
+        android:text="温度设置"
         android:textStyle="bold"
         android:fontFamily="sans-serif-black" />
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="50dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:text="色温"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-black" />
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
+   <EditText
+       android:id="@+id/air_choose_temperature"
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:hint="请输入16~30之间的温度"/>
+
 
 
 
