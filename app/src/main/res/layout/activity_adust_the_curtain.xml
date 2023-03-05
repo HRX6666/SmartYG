@@ -1,80 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Page_Samrt.AdjustTheLights"
+android:orientation="vertical"
+android:background="@color/yellow1">
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/curtain_tb"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Page_Samrt.AdjustTheLights"
+    android:layout_height="wrap_content"
+    app:logo="@drawable/back"
+    app:title="窗帘"
+    app:titleTextColor="@color/lighthui">
+</androidx.appcompat.widget.Toolbar>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/curtain_tv"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="25dp"
+        android:drawableStart="@drawable/curtain_smart"
+        android:fontFamily="sans-serif-black"
+        android:text=" 窗帘控制"
+        android:textColor="@color/lighthui"
+        android:textSize="15dp" />
+
+</LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="vertical">
+
+</RelativeLayout>
+
+<SeekBar
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:splitTrack="true"
+    android:thumb="@drawable/curtain_seekbar" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
     android:orientation="vertical"
-    android:background="@color/yellow1">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/curtain_tb"
-        android:layout_width="match_parent"
+    android:layout_marginTop="30dp">
+
+    <com.example.smarthome.View.FButton
+        android:id="@+id/open_all"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        app:logo="@drawable/back"
-        app:title="窗帘"
-        app:titleTextColor="@color/lighthui">
-    </androidx.appcompat.widget.Toolbar>
+        android:layout_gravity="left|top"
 
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="30dp"
+        android:text="全开" />
+
+    <com.example.smarthome.View.FButton
+        android:id="@+id/close_curtain"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:text="全关"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@+id/open_all"
 
-
-        <TextView
-            android:layout_width="180dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="25dp"
-            android:drawableStart="@drawable/curtain_smart"
-            android:fontFamily="sans-serif-black"
-            android:text=" 窗帘控制"
-            android:textColor="@color/lighthui"
-            android:textSize="15dp" />
-
-    </LinearLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/open_all"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="全开"
-            android:backgroundTint="@color/yellow2"/>
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/open_mid"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="半开"
-            android:backgroundTint="@color/yellow2"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/close_curtain"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="全关"
-            android:backgroundTint="@color/yellow2"
-            />
-    </RelativeLayout>
-
-    <SeekBar
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:splitTrack="true"
-        android:thumb="@drawable/curtain_seekbar" />
+        />
+</RelativeLayout>
 
 
 </LinearLayout>

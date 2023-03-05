@@ -14,21 +14,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.smarthome.Adapter.AddSmartAdapter;
-import com.example.smarthome.Adapter.AddSmartHelper;
-import com.example.smarthome.Page_Samrt.AdjustTheAirCondition;
-import com.example.smarthome.Page_Samrt.AdjustTheLights;
-import com.example.smarthome.Page_Samrt.AdustTheCurtain;
-import com.example.smarthome.Page_Samrt.GoHome;
-import com.example.smarthome.Page_Samrt.GoOff;
-import com.example.smarthome.Page_Samrt.Monitoring;
-import com.example.smarthome.Page_Samrt.Night;
+import com.example.smarthome.Helper.AddSmartHelper;
 import com.example.smarthome.R;
 
 import java.util.ArrayList;
 
 public class SmartFragment extends Fragment{
     RecyclerView addsmart;
-    RecyclerView.Adapter adapter;
     AddSmartAdapter rvadapter;
     ImageView go_off,go_home,night,addroom;
 
@@ -112,6 +104,7 @@ public class SmartFragment extends Fragment{
         addSmartHelpers.add(new AddSmartHelper(R.drawable.air_condition_smart, "空调"));
         addSmartHelpers.add(new AddSmartHelper(R.drawable.curtain_smart, "窗帘"));
         addSmartHelpers.add(new AddSmartHelper(R.drawable.lock_smart, "智能门锁"));
+        addSmartHelpers.add(new AddSmartHelper(R.drawable.music,"智能音响"));
         rvadapter = new AddSmartAdapter(addSmartHelpers);
         addsmart.setAdapter(rvadapter);
         rvadapter.setOnItemClickListener(new AddSmartAdapter.OnItemClickListener() {

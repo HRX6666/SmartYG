@@ -56,6 +56,7 @@ public class AdjustTheAirCondition extends AppCompatActivity {
     private void initmodle() {
         ArrayAdapter starAdapter_airmodel = ArrayAdapter.createFromResource(getApplicationContext(), R.array.choose_aircondition_modle, android.R.layout.simple_spinner_item);
         Spinner sp_dropdown = findViewById(R.id.air_choose_model);
+        sp_dropdown.setPopupBackgroundResource(R.color.yellow3);
         starAdapter_airmodel.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp_dropdown.setPrompt("请选择房间");
         sp_dropdown.setAdapter(starAdapter_airmodel);
@@ -78,6 +79,7 @@ public class AdjustTheAirCondition extends AppCompatActivity {
         ArrayAdapter starAdapter_airwindspeed = ArrayAdapter.createFromResource(getApplicationContext(), R.array.choose_wind_speed, android.R.layout.simple_spinner_item);
         Spinner sp_dropdown = findViewById(R.id.air_choose_windspeed);
         starAdapter_airwindspeed.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp_dropdown.setPopupBackgroundResource(R.color.yellow3);
         sp_dropdown.setPrompt("请选择房间");
         sp_dropdown.setAdapter(starAdapter_airwindspeed);
         sp_dropdown.setSelection(0);
@@ -99,6 +101,7 @@ public class AdjustTheAirCondition extends AppCompatActivity {
         ArrayAdapter starAdapter_airhome = ArrayAdapter.createFromResource(getApplicationContext(), R.array.choose_home, android.R.layout.simple_spinner_item);
         Spinner sp_dropdown = findViewById(R.id.air_choose_home);
         sp_dropdown.setDropDownVerticalOffset(android.R.layout.simple_spinner_dropdown_item);
+        sp_dropdown.setPopupBackgroundResource(R.color.yellow3);
         sp_dropdown.setPrompt("请选择房间");
         sp_dropdown.setAdapter(starAdapter_airhome);
         sp_dropdown.setSelection(0);

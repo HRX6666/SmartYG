@@ -16,31 +16,50 @@
         app:titleTextColor="@color/lighthui">
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
         <TextView
-            android:layout_width="180dp"
+            android:id="@+id/lights_tv"
+            android:layout_width="130dp"
             android:layout_height="150dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:drawableStart="@drawable/turn_the_lights_off"
             android:fontFamily="sans-serif-black"
             android:text=" 智能灯"
             android:textColor="@color/lighthui"
             android:textSize="15dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="一键控制全屋灯光"
-            android:textColor="@color/lighthui"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+        <com.example.smarthome.View.FButton
+            android:id="@+id/primary_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/lights_tv"
+            android:text="开灯" />
 
-    </LinearLayout>
+        <com.example.smarthome.View.FButton
+            android:id="@+id/trail_shut"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/primary_button"
+            android:text="关灯" />
+
+
+    </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -58,11 +77,13 @@
         android:text="亮度"
         android:textStyle="bold"
         android:fontFamily="sans-serif-black" />
+
     <SeekBar
         android:id="@+id/brightness"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:thumb="@drawable/adjust_lights"/>
+        android:thumb="@drawable/adjust_lights" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="20dp"
@@ -88,19 +109,8 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/trail_open"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow2"
-        android:text="开灯" />
 
-    <Button
-        android:id="@+id/trail_shut"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/yellow2"
-        android:text="关灯" />
+
 
 
 </LinearLayout>

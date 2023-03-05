@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +14,14 @@
         android:theme="@style/Theme.SmartHome"
         tools:targetApi="31">
         <activity
-            android:name=".DrawingRoom"
+            android:name=".Page_Huiju.AddHome"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Page_Huiju.DrawingRoom"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -159,6 +167,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".Activity.FirstActivity"
             android:exported="true">

@@ -31,7 +31,6 @@ public class AdustTheCurtain extends AppCompatActivity {
         setContentView(R.layout.activity_adust_the_curtain);
         curtain_tb=findViewById(R.id.curtain_tb);
         bt_openAll=findViewById(R.id.open_all);
-        bt_openMid=findViewById(R.id.open_mid);
         bt_closeCurtain=findViewById(R.id.close_curtain);
         clientMQTT=new ClientMQTT("light");
         try {
@@ -40,12 +39,7 @@ public class AdustTheCurtain extends AppCompatActivity {
             e.printStackTrace();
         }
         clientMQTT.startReconnect(AdustTheCurtain.this);
-        bt_openMid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
     }
 
 

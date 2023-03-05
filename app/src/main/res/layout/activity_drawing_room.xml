@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Page_Huiju.DrawingRoom">
+    tools:context=".Page_Huiju.DrawingRoom"
+    android:orientation="vertical"
+    android:background="@color/purple_100">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/set_tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:logo="@drawable/back"
+        android:background="@drawable/bg1"
+        app:title="智能设备"
+        app:titleTextColor="@color/lighthui"/>
+
+
 
 
 </LinearLayout>

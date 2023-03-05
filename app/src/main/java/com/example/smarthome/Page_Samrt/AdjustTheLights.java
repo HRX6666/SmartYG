@@ -33,7 +33,7 @@ public class AdjustTheLights extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adjust_the_lights);
         lights_tb=findViewById(R.id.lights_tb);
-        open_light=findViewById(R.id.trail_open);
+        open_light=findViewById(R.id.primary_button);
         shut_light=findViewById(R.id.trail_shut);
         spinner_model=findViewById(R.id.lights_choose_model);
         spinner_home=findViewById(R.id.lights_choose_home);
@@ -94,7 +94,8 @@ public class AdjustTheLights extends AppCompatActivity {
             }
         });
 
-        spinner_model.setPopupBackgroundResource(R.drawable.bg);//下拉背景,可以优化一下
+        spinner_model.setPopupBackgroundResource(R.color.yellow3);//下拉背景,可以优化一下
+        spinner_home.setPopupBackgroundResource(R.color.yellow3);//下拉背景,可以优化一下
 
         spinner_home.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
